@@ -14,6 +14,7 @@
    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
    <!-- fancybox -->
    <link rel="stylesheet" href="{% static 'assets/css/jquery.fancybox.min.css' %}">
    <!-- Font Awesome 6 -->
@@ -44,22 +45,22 @@
     <div class="container">
       <div class="top-bar">
         <div class="logo">
-          <a href="#">
-            <img alt="logo" src="{% static 'assets/img/logo.png' %}">
+          <a href="{% url 'home' %}">
+<!--            <img alt="logo" src="{% static 'assets/img/logo.png' %}">-->
+            <h1>VE</h1>
           </a>
         </div>
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#faq’s">Faq’s</a></li>
+            <li><a href="#how">How</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <a href="callto:+12344502086"><i>
+        <a href="callto:+2348164920137"><i>
             <svg height="112" viewBox="0 0 24 24" width="112" xmlns="http://www.w3.org/2000/svg"><g clip-rule="evenodd" fill="rgb(255255,255)" fill-rule="evenodd"><path d="m7 2.75c-.41421 0-.75.33579-.75.75v17c0 .4142.33579.75.75.75h10c.4142 0 .75-.3358.75-.75v-17c0-.41421-.3358-.75-.75-.75zm-2.25.75c0-1.24264 1.00736-2.25 2.25-2.25h10c1.2426 0 2.25 1.00736 2.25 2.25v17c0 1.2426-1.0074 2.25-2.25 2.25h-10c-1.24264 0-2.25-1.0074-2.25-2.25z"></path><path d="m10.25 5c0-.41421.3358-.75.75-.75h2c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-2c-.4142 0-.75-.33579-.75-.75z"></path><path d="m9.25 19c0-.4142.33579-.75.75-.75h4c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-4c-.41421 0-.75-.3358-.75-.75z"></path></g></svg>
-          </i><b> +1234 450 2086</b></a>
+          </i><b> +2348164920137</b></a>
       </div>
     </div>
 </header>
@@ -105,17 +106,7 @@
                   <svg fill="none" height="112" viewBox="0 0 24 24" width="112" xmlns="http://www.w3.org/2000/svg"><g clip-rule="evenodd" fill="rgb(0,0,0)" fill-rule="evenodd"><path d="m7 2.75c-.41421 0-.75.33579-.75.75v17c0 .4142.33579.75.75.75h10c.4142 0 .75-.3358.75-.75v-17c0-.41421-.3358-.75-.75-.75zm-2.25.75c0-1.24264 1.00736-2.25 2.25-2.25h10c1.2426 0 2.25 1.00736 2.25 2.25v17c0 1.2426-1.0074 2.25-2.25 2.25h-10c-1.24264 0-2.25-1.0074-2.25-2.25z"></path><path d="m10.25 5c0-.41421.3358-.75.75-.75h2c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-2c-.4142 0-.75-.33579-.75-.75z"></path><path d="m9.25 19c0-.4142.33579-.75.75-.75h4c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-4c-.41421 0-.75-.3358-.75-.75z"></path></g></svg>
                     <input type="number" name="Phone No" placeholder="Phone No" required="">
                 </div>
-                <p>Preferred Consult Method: </p>
-                <div class="d-flex align-items-center">
-                    <div class="radio-button">
-                        <input type="radio" id="VirtualIn-Office" name="fav_language" value="Virtual">
-                        <label for="Virtual">VirtualIn-Office</label>
-                    </div>
-                    <div class="radio-button">
-                       <input type="radio" id="css" name="fav_language" value="In-Office">
-                        <label for="css">VirtualIn-Office</label><br>
-                    </div>
-                </div>
+
                 <button type="submit" class="btn batton"> Start Free Trial </button>
         </form> 
       </div>
@@ -181,7 +172,7 @@
 </section>
 
 
-<section class="it-works no-top gap">
+<section id="how" class="it-works no-top gap mt-3 pt-3">
   <div class="container">
     <div class="heading">
       <span>How It Works?</span>
@@ -249,29 +240,29 @@
 
       </div>
     </div>
-    <div class="logodata owl-carousel owl-theme">
-          <div class="partner item">
-            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-1.png' %}">
-          </div>
-          <div class="partner item">
-            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-2.png' %}">
-          </div>
-          <div class="partner item">
-            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-3.png' %}">
-          </div>
-          <div class="partner item">
-            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-4.png' %}">
-          </div>
-          <div class="partner item">
-            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-5.png' %}">
-          </div>
-    </div>
+<!--    <div class="logodata owl-carousel owl-theme">-->
+<!--          <div class="partner item">-->
+<!--            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-1.png' %}">-->
+<!--          </div>-->
+<!--          <div class="partner item">-->
+<!--            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-2.png' %}">-->
+<!--          </div>-->
+<!--          <div class="partner item">-->
+<!--            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-3.png' %}">-->
+<!--          </div>-->
+<!--          <div class="partner item">-->
+<!--            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-4.png' %}">-->
+<!--          </div>-->
+<!--          <div class="partner item">-->
+<!--            <img alt="sponsor-img" src="{% static 'assets/img/sponsor-5.png' %}">-->
+<!--          </div>-->
+<!--    </div>-->
   </div>
 </section>
 
 
 
-<section class="gap no-top">
+<section class="gap no-top" id="reviews">
   <div class="container">
     <div class="heading">
       <span>Satisfied Customers</span>
@@ -282,7 +273,7 @@
       <div class="col-lg-12 item">
         <div class="clients">
             <p>"When I first met Vincent, the agency had been searching for a decent email copywriter for months. Most of them didn’t make it through the trial stage. Vincent was the first to pass that trial in months and has gone on to become one of our best email copywriters. He’s reliable and writes copy that has generated millions of $$ for our clients. Definitely someone you want working on your email marketing.”</p>
-          <div class="d-flex align-items-center mt-4"><div><i><img alt="quote" src="{% static 'assets/img/quote.png' %}"></i></div>
+          <div class="d-flex align-items-center mt-4"><div><i><img alt="quote" src="{% static 'assets/img/lanre.jpeg' %}"></i></div>
             <div>
               <h6>Lanre Shonola</h6>
               <span>Head of Copy @ Tention Marketing | Copywriter | $30M generated for 70+ clients</span>
@@ -294,7 +285,7 @@
       <div class="col-lg-12 item">
         <div class="clients">
           <p>"Vincent is not only a very talented writer but he is a genuine and reliable partner. I was more than impressed with his work and commitment and I will use him over and again in my business. I recommend you do the same - you won't be disappointed!”</p>
-          <div class="d-flex align-items-center mt-4"><div><i><img alt="quote" src="{% static 'assets/img/quote.png' %}"></i></div>
+          <div class="d-flex align-items-center mt-4"><div><i><img alt="quote" src="{% static 'assets/img/mimi.jpeg' %}"></i></div>
             <div>
               <h6>Mimi Nicklin </h6>
               <span>Founder & CEO, Empathy Everywhere, Malaysia. International Best-Selling Author</span>
@@ -305,9 +296,9 @@
       <div class="col-lg-12 item">
         <div class="clients">
           <p>"Vincent’s tenacity and willingness to soak up information like a sponge are what I admire most about him. Once he puts his mind to any business task, he finds a solution. His eagerness to learn from both the customers and his team is admirable. Would recommend Vincent for anything sales & marketing, especially for companies using the internet to scale their revenue.”</p>
-          <div class="d-flex align-items-center mt-4"><div><i><img alt="quote" src="{% static 'assets/img/quote.png' %}"></i></div>
+          <div class="d-flex align-items-center mt-4"><div><i><img alt="quote" src="{% static 'assets/img/golibe.jpeg' %}"></i></div>
             <div>
-              <h6>Business Leader</h6>
+              <h6>Golibe Ilechukwu</h6>
               <span>Business Leader | Founder, Sales school Africa | Full-stack Marketer with over $10M in revenue | Global Speaker | Tech enthusiast</span>
             </div>
           </div>
@@ -323,7 +314,7 @@
 
 
 
-<section id="pricing" class="pricing-plans-section gap" style="background-image:url(../static/assets/img/pricing-plans.jpg)">
+<section class="pricing-plans-section gap" style="background-image:url(../static/assets/img/pricing-plans.jpg)">
   <div class="container">
     <div class="heading">
 <!--      <span>Pricing Plans</span>-->
@@ -478,7 +469,7 @@
     <div class="row align-items-center">
       <div class="col-lg-7">
         <div class="customize-img">
-          <img alt="customize" src="{% static 'assets/img/customize.png' %}">
+          <img alt="customize" src="{% static 'assets/img/vincent.jpeg' %}" width="400" height="400" style="border-radius:50%;">
         </div>
       </div>
       <div class="col-lg-5">
@@ -532,39 +523,51 @@ I can help you create exactly that.
 
 
 
-<footer class="gap no-bottom" style="background-image: url(../static/assets/img/line-img.png);">
+<footer id="contact" class="gap no-bottom" style="background-image: url(../static/assets/img/line-img.png);">
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-6">
         <div class="logo">
           <a href="#">
-            <img alt="logo" src="{% static 'assets/img/logo.png' %}">
+<!--            <img alt="logo" src="{% static 'assets/img/logo.png' %}">-->
           </a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="links">
-          <h5>Information</h5>
+          <h5>Socials</h5>
           <div class="line"></div>
-          <p>Enim ad minim veniam, quis rem ipsor sit amet ao Enim ad minim venianim veniam dolor sit amet ao.</p>
+          <a href="https://www.facebook.com/share/1Akh27JEGx/?mibextid=wwXIfr" target="_blank">
+                <i class="flaticon-facebook"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/vincent-eze-nwali" target="_blank">
+                <i class="flaticon-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/vin_reigns?igsh=NDJ1dDF2eWpja3Vy&utm_source=qr/" target="_blank">
+              <i class="flaticon-instagram"></i>
+          </a>
+          <a href="https://x.com/ezevincent_" target="_blank">
+              <i class="flaticon-twitter"></i>
+          </a>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="links">
           <h5>Contact Us</h5>
           <div class="line"></div>
-          <span>Phone:<a href="callto:214-432-5905">214-432-5905</a></span>
+          <span>Phone:<a href="callto:+2348164920137">+2348164920137</a></span>
           <span class="mt-3 d-flex">Email:<a href="mailto:support@vincenteze.com">support@vincenteze.com</a></span>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <h3>Start a Free Trial</h3>
-      <p>we help business innovate & growth company with 18 Years Perfessional Experience</p>
-      <a href="#" class="btn">start Free Trial</a>
+      <h3>Book A Calendly call with us today</h3>
+      <p>we help business innovate & growth company with 18 Years Professional Experience</p>
+      <a href="https://calendly.com/vincent_eze/30min" class="btn">Book Now</a>
     </div>
     <div class="footer-end">
-      <p>2024 © Vincent Eze | Professional Email Marketer</p>
+      <p>2025 © Vincent Eze | Professional Email Marketer</p>
     </div>
   </div>
   <div class="footer-shaps">
