@@ -520,14 +520,10 @@ I can help you create exactly that.
 
 
 
-
-
-
 <footer id="contact" class="gap no-bottom" style="background-image: url(../static/assets/img/line-img.png);">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 col-md-6 mr-4 pl-4">
-        <form role="form" class="get-a-quote" id="contact-for" method="POST">
+      <form role="form" class="get-a-quote" id="contact-for" method="POST">
           {% csrf_token %}
             <div>
                   <h3>Spots are limited...</h3>
@@ -559,47 +555,28 @@ I can help you create exactly that.
                 <button type="submit" class="btn batton mt-3"> Submit </button>
         </form>
 
-      </div>
-      <div class="col-lg-6 col-md-6 ml-4 pl-4">
-        <div class="links mb-3">
-          <h5>Socials</h5>
-          <div class="line"></div>
-          <a href="https://www.facebook.com/share/1Akh27JEGx/?mibextid=wwXIfr" target="_blank">
-                <i class="flaticon-facebook"></i>
-          </a>
-
-          <a href="https://www.linkedin.com/in/vincent-eze-nwali" target="_blank">
-                <i class="flaticon-linkedin"></i>
-          </a>
-          <a href="https://www.instagram.com/vin_reigns?igsh=NDJ1dDF2eWpja3Vy&utm_source=qr/" target="_blank">
-              <i class="flaticon-instagram"></i>
-          </a>
-          <a href="https://x.com/ezevincent_" target="_blank">
-              <i class="flaticon-twitter"></i>
-          </a>
-        </div>
-
-        <div class="links mt-4">
-          <h5>Contact Us</h5>
-          <div class="line"></div>
-          <span class="mt-3 d-flex">Email:<a href="mailto:vincent@vincenteze.com">vincent@vincenteze.com</a></span>
-        </div>
-
-        <div class="links mt-4">
-          <h5>Book A Calendly call with us today</h5>
-          <div class="line"></div>
-          <span class="mt-3 d-flex"><a href="https://calendly.com/vincent_eze/30min" class="btn">Book Now</a></span>
-        </div>
-      </div>
-<!--      <div class="col-lg-4 col-md-6">-->
-<!--        -->
-<!--      </div>-->
     </div>
-<!--    <div class="footer-bottom">-->
-<!--      <h3>Book A Calendly call with us today</h3>-->
-<!--      <p>we help business innovate & growth company with 18 Years Professional Experience</p>-->
-<!--      <a href="https://calendly.com/vincent_eze/30min" class="btn">Book Now</a>-->
-<!--    </div>-->
+
+    <div class="social-icons text-center">
+      <a href="https://www.facebook.com/share/1Akh27JEGx/?mibextid=wwXIfr" target="_blank" style="color:white; font-size:2rem;">
+          <i class="flaticon-facebook"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/vincent-eze-nwali" target="_blank" style="color:white; font-size:2rem;">
+          <i class="flaticon-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/vin_reigns?igsh=NDJ1dDF2eWpja3Vy&utm_source=qr/" target="_blank" style="color:white; font-size:2rem;">
+          <i class="flaticon-instagram"></i>
+      </a>
+      <a href="https://x.com/ezevincent_" target="_blank" style="color:white; font-size:2rem;">
+          <i class="flaticon-twitter"></i>
+      </a>
+
+      <a href="mailto:vincent@vincenteze.com" target="_blank" style="color:white; font-size:2rem;">
+          <i class="flaticon-email"></i>
+      </a>
+  </div>
+
+
     <div class="footer-end mt-4 pt-4">
       <p>2025 © Vincent Eze | Professional Email Marketer</p>
     </div>
