@@ -1,36 +1,24 @@
-# Use the official Python image as a base image
-FROM python:3.11-slim
+ARG PYTHON_VERSION=3.12-slim
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
+FROM python:${PYTHON_VERSION}
 
-# Set the working directory in the container
-WORKDIR /app
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    libpq-dev \
-    gcc \
-    netcat-openbsd \
-    && rm -rf /var/lib/apt/lists/*
+RUN mkdir -p /code
 
-# Install Python dependencies
-COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /code
 
-# Copy the project files to the working directory
-COPY . /app/
+COPY requirements.txt /tmp/requirements.txt
+RUN set -ex && \
+    pip install --upgrade pip && \
+    pip install -r /tmp/requirements.txt && \
+    rm -rf /root/.cache/
+COPY . /code
 
-# Collect static files (if you have any)
-RUN python manage.py collectstatic --no-input
+ENV SECRET_KEY "C16RW9FcIMAxLaDCtHzkbuWm2ZakPtWKSsDfSLE62EJLNXt70k"
+RUN python manage.py collectstatic --noinput
 
-#Make migrations
-RUN python manage.py collectstatic --no-input
-RUN python manage.py collectstatic --no-input
-
-# Expose the port your Django app runs on
 EXPOSE 8000
 
-# Command to make migrations, run migrations, and start the app
-CMD ["sh", "-c", "python manage.py runserver 0.0.0.0:$PORT"]
+CMD ["gunicorn","--bind",":8000","--workers","2","core.wsgi"]
